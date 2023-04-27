@@ -3,7 +3,7 @@ from io import BytesIO
 
 def senti(image):
     #yatta gif
-    im1 = Image.open('/yatta/yatta.gif')
+    im1 = Image.open('yatta/yatta.gif')
     # pfp
     im2 = Image.open(image).resize((200,200))
     
@@ -13,7 +13,7 @@ def senti(image):
     frames = []
     for frame in ImageSequence.Iterator(im1):
         if len(frames) < 35:
-            mask_im = Image.open(f'/yatta/fmask/senti{len(frames)}.png').resize(im1.size).convert('1')
+            mask_im = Image.open(f'yatta/fmask/senti{len(frames)}.png').resize(im1.size).convert('1')
             frame = Image.composite(im1, img, mask_im)
             frame = frame.copy()
             frames.append(frame)
