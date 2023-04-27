@@ -13,7 +13,7 @@ def senti(image):
     frames = []
     for frame in ImageSequence.Iterator(im1):
         if len(frames) < 35:
-            mask_im = Image.open(f'.../yatta/fmask/senti{len(frames)}.png').resize(im1.size).convert('1')
+            mask_im = Image.open(f'/yatta/fmask/senti{len(frames)}.png').resize(im1.size).convert('1')
             frame = Image.composite(im1, img, mask_im)
             frame = frame.copy()
             frames.append(frame)
