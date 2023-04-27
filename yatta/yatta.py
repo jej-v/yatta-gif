@@ -3,7 +3,7 @@ from io import BytesIO
 
 def senti(image):
     #yatta gif
-    im1 = Image.open('.../yatta/yatta.gif')
+    im1 = Image.open('/yatta/yatta.gif')
     # pfp
     im2 = Image.open(image).resize((200,200))
     
